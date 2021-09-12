@@ -1,0 +1,284 @@
+<html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: flex-end;
+        position: fixed;
+        background-color: rgb(53, 105, 201);
+        width: 100%;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .nav-list {
+        font-family: 'Arvo', serif;
+        display: flex;
+    }
+    
+    .nav-list a {
+        display: block;
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        transition: background 0.3s ease-out;
+    }
+    
+    .nav-list a:hover {
+        background: rgb(201, 63, 206);
+    }
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .welcome-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        color: whitesmoke;
+        background-image: linear-gradient(rgb(53, 105, 201), rgb(201, 63, 206));
+    }
+    
+    .welcome-section>h1 {
+        font-size: 6rem;
+        font-weight: 800;
+    }
+    
+    .welcome-section>p {
+        font-size: 2.5rem;
+        font-style: italic;
+        font-weight: 200;
+    }
+    
+    .project-section {
+        color: whitesmoke;
+        text-align: center;
+        background-image: linear-gradient(rgb(201, 63, 206), rgb(53, 105, 201));
+        padding: 4rem 2rem;
+    }
+    
+    .project-section-header {
+        font-size: 3rem;
+        width: fit-content;
+        margin: 2rem auto 2rem auto;
+        border-bottom: 0.2rem solid whitesmoke;
+    }
+    
+    .projects-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 2rem;
+        grid-row-gap: 6rem;
+        padding: 4rem 4rem;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+    }
+    
+    .project-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .button-tile {
+        display: inline-block;
+        margin-top: 2rem;
+        padding: 0.3rem 1.5rem;
+        border-radius: 2px;
+        font-size: 1.5rem;
+    }
+    
+    .button-tile-hov {
+        background: rgb(42, 78, 146);
+        transition: background 0.5s ease-out;
+    }
+    
+    .button-tile-hov:hover {
+        background: rgb(205, 133, 207);
+    }
+    
+    .contact-section {
+        color: whitesmoke;
+        display: flex;
+        background-image: linear-gradient( rgb(53, 105, 201), rgb(201, 63, 206));
+        height: 35vh;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        font-size: 1.5rem;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    
+    .contact-section-header>h1 {
+        font-size: 4rem;
+        font-style: bold;
+    }
+    
+    .contact-section-header>p {
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+    
+    .contact-links {
+        padding: 3rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .fab {
+        padding: 0 0.5rem;
+    }
+    
+    .fas {
+        padding: 0 0.5rem;
+    }
+    
+    .contact-details {
+        padding: 1rem;
+        margin: 0 0.5rem;
+        transition: transform 0.3s ease-out;
+    }
+    
+    .contact-details:hover {
+        transform: translateY(8px);
+    }
+    
+    footer {
+        background-color: rgb(201, 63, 206);
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        color: whitesmoke;
+        box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    footer>p {
+        padding: 0.2rem 0.5rem;
+        width: 100%;
+    }
+    
+    footer>h4 {
+        padding: 0.2rem 0.5rem;
+        width: 100%;
+        text-align: end;
+    }
+    
+    @media screen and (max-width:1000px) {
+        .nav {
+            display: flex;
+            justify-content: center;
+        }
+        .nav-list a {
+            font-size: 1rem;
+        }
+        .welcome-section h1 {
+            font-size: 4rem;
+        }
+        .project-section-header {
+            font-size: 2.5rem;
+        }
+        .welcome-section p {
+            font-size: 2rem;
+        }
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+        .contact-links {
+            padding-top: 8rem;
+        }
+        .contact-links a {
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+        footer>p {
+            font-size: 0.6rem;
+            padding: 0.2rem 0.5rem;
+            width: 100%;
+        }
+        footer>h4 {
+            font-size: 0.6rem;
+            padding: 0.2rem 0.5rem;
+            width: 50%;
+            text-align: end;
+        }
+    }
+</style>
+
+<body>
+    <nav class="nav">
+        <ul class="nav-list" style="list-style-type: none;">
+            <li class="nav-list-items"><a href="#welcome-section">About</a></li>
+            <li class="nav-list-items"><a href="#project-section">Work</a></li>
+            <li class="nav-list-items"><a href="#contact-section">Contact</a></li>
+        </ul>
+    </nav>
+
+    <head>
+        <script src="https://kit.fontawesome.com/c7f2b9880b.js" crossorigin="anonymous"></script>
+    </head>
+
+
+
+    <section id="welcome-section" class="welcome-section">
+        <h1>Hey I'm Manraj!</h1>
+        <p>a programmer, a gamer and a guitarist.</p>
+    </section>
+
+    <section id="project-section" class="project-section">
+        <h1 id="project-section-header" class="project-section-header">These are some of my projects</h1>
+        <div class="projects-grid">
+            <a href="https://codepen.io/therealmanraj/details/JjNZoZO" target="_blank" class="project project-tile">
+                <img class="project-image" src="project1.png" alt="Tribute Page" />
+                <p class="project-title">Tribute Page</p>
+            </a>
+            <a href="https://therealmanraj.github.io/COVID/" target="_blank" class="project project-tile">
+                <img class="project-image" src="project2.png" alt="COVID App" />
+                <p class="project-title">COVID App</p>
+            </a>
+        </div>
+        <a href="#source" id="button-tile-hov button-tile" class="button-tile-hov button-tile">Show All</a>
+    </section>
+
+    <section id="contact-section" class="contact-section">
+        <div class="contact-section-header">
+            <h1>Let's Work Together!</h1>
+            <p>while playing Led Zeppelin in the background.</p>
+        </div>
+        <div class="contact-links">
+            <a href="https://github.com/therealmanraj" target="_blank" class="btn contact-details"><i class="fab fa-github"></i>GitHub</a>
+            <a href="https://www.instagram.com/therealmanraj/" target="_blank" class="btn contact-details"><i class="fab fa-instagram"></i>Instagram</a>
+            <a href="https://steamcommunity.com/id/manraj16" target="_blank" class="btn contact-details"><i class="fab fa-steam"></i>Steam</a>
+            <a href="https://www.linkedin.com/in/manraj-singh-11386115b/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i>LinkedIn</a>
+            <a href="https://twitter.com/imtherealmanraj" target="_blank" class="btn contact-details"><i class="fab fa-twitter"></i>Twitter</a>
+            <a href="mailto:singhmanraj8@gmail.com" class="btn contact-details"><i class="fas fa-envelope"></i>Mail</a>
+            <a href="tel:6900817759" class="btn contact-details"><i class="fas fa-phone"></i>Phone</a>
+        </div>
+    </section>
+    <footer>
+        <p>All the mentioned above are real and true to my knowledge.</p>
+        <h4><i class="far fa-copyright"></i>therealmanraj</h4>
+    </footer>
+</body>
+
+
+</html>
