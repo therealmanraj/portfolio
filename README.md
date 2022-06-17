@@ -1,5 +1,3 @@
-# TrainingRepo
+# Hello welcome to my portfolio page!
 
-- Vikas
-- Apoorvaa
-- Manraj
+## (CLICK HERE)[https://therealmanraj.github.io/portfolio/]
